@@ -1,0 +1,34 @@
+{
+  "mlp": {
+    "temperature": 1.0099999904632568,
+    "ece_uncalibrated": 0.032893557226364355,
+    "ece_temperature_scaled": 0.033905170572790674,
+    "mean_conf_correct": 0.8307275176048279,
+    "mean_conf_incorrect": 0.568394124507904,
+    "errors_with_conf_over_0.9": 49,
+    "total_errors": 674,
+    "threshold_policy": {
+      "threshold": 0.9259999990463257,
+      "coverage": 0.40403440594673157,
+      "routed_to_human": 0.5959655940532684,
+      "auto_accuracy": 0.9743024706840515,
+      "routed_accuracy": 0.6819313168525696
+    }
+  },
+  "gcn": {
+    "temperature": 0.7799999713897705,
+    "ece_uncalibrated": 0.04440309411869032,
+    "ece_temperature_scaled": 0.0207130237861261,
+    "mean_conf_correct": 0.8928455710411072,
+    "mean_conf_incorrect": 0.636431097984314,
+    "errors_with_conf_over_0.9": 41,
+    "total_errors": 293,
+    "threshold_policy": {
+      "threshold": 0.824999988079071,
+      "coverage": 0.798872709274292,
+      "routed_to_human": 0.201127290725708,
+      "auto_accuracy": 0.9710360169410706,
+      "routed_accuracy": 0.6828908324241638
+    }
+  }
+}
