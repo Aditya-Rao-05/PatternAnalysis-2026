@@ -6,7 +6,7 @@ Dataset: the modified Gayanku `facebook.npz`
 (https://github.com/gayanku/facebook_page-page_dataset), which contains
 22,470 Facebook pages (nodes), 171,002 mutual-like links (stored as
 342,004 directed edges), 128-dim node features, and 4 page categories:
-0 = TV show, 1 = government, 2 = company, 3 = politician.
+0 = company, 1 = government, 2 = company, 3 = politician.
 
 Setting: TRANSDUCTIVE semi-supervised node classification.
     - The model sees the WHOLE graph (all nodes, all edges, all features)
