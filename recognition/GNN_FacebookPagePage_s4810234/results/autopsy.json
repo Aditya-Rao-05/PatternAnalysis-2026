@@ -1,0 +1,176 @@
+{
+  "top_confident_errors": [
+    {
+      "node": 16052,
+      "page_name": "Senate of Canada - S\u00e9nat du Canada",
+      "true": "government",
+      "gcn_pred": "politician",
+      "gcn_conf": 1.0,
+      "mlp_pred": "politician",
+      "degree": 266,
+      "homophily": 0.004,
+      "neighbours_in_pred_class": 0.996,
+      "n_company": 0,
+      "n_government": 1,
+      "n_politician": 265,
+      "n_tvshow": 0
+    },
+    {
+      "node": 9254,
+      "page_name": "Comedy Central UK",
+      "true": "company",
+      "gcn_pred": "tvshow",
+      "gcn_conf": 1.0,
+      "mlp_pred": "tvshow",
+      "degree": 16,
+      "homophily": 0.062,
+      "neighbours_in_pred_class": 0.938,
+      "n_company": 1,
+      "n_government": 0,
+      "n_politician": 0,
+      "n_tvshow": 15
+    },
+    {
+      "node": 9708,
+      "page_name": "Fractal",
+      "true": "tvshow",
+      "gcn_pred": "company",
+      "gcn_conf": 1.0,
+      "mlp_pred": "company",
+      "degree": 1,
+      "homophily": 0.0,
+      "neighbours_in_pred_class": 1.0,
+      "n_company": 1,
+      "n_government": 0,
+      "n_politician": 0,
+      "n_tvshow": 0
+    },
+    {
+      "node": 20212,
+      "page_name": "ITV Football",
+      "true": "company",
+      "gcn_pred": "tvshow",
+      "gcn_conf": 1.0,
+      "mlp_pred": "tvshow",
+      "degree": 8,
+      "homophily": 0.0,
+      "neighbours_in_pred_class": 1.0,
+      "n_company": 0,
+      "n_government": 0,
+      "n_politician": 0,
+      "n_tvshow": 8
+    },
+    {
+      "node": 6163,
+      "page_name": "C\u00e1mara de Diputados - H. Congreso de la Uni\u00f3n",
+      "true": "government",
+      "gcn_pred": "politician",
+      "gcn_conf": 1.0,
+      "mlp_pred": "politician",
+      "degree": 48,
+      "homophily": 0.167,
+      "neighbours_in_pred_class": 0.833,
+      "n_company": 0,
+      "n_government": 8,
+      "n_politician": 40,
+      "n_tvshow": 0
+    },
+    {
+      "node": 20083,
+      "page_name": "DIRECTV Puerto Rico",
+      "true": "company",
+      "gcn_pred": "tvshow",
+      "gcn_conf": 1.0,
+      "mlp_pred": "company",
+      "degree": 69,
+      "homophily": 0.159,
+      "neighbours_in_pred_class": 0.812,
+      "n_company": 11,
+      "n_government": 1,
+      "n_politician": 1,
+      "n_tvshow": 56
+    },
+    {
+      "node": 17725,
+      "page_name": "Ticketmaster United Kingdom",
+      "true": "company",
+      "gcn_pred": "tvshow",
+      "gcn_conf": 0.999,
+      "mlp_pred": "politician",
+      "degree": 12,
+      "homophily": 0.5,
+      "neighbours_in_pred_class": 0.5,
+      "n_company": 6,
+      "n_government": 0,
+      "n_politician": 0,
+      "n_tvshow": 6
+    },
+    {
+      "node": 3855,
+      "page_name": "Viacom18",
+      "true": "company",
+      "gcn_pred": "tvshow",
+      "gcn_conf": 0.999,
+      "mlp_pred": "company",
+      "degree": 4,
+      "homophily": 0.0,
+      "neighbours_in_pred_class": 1.0,
+      "n_company": 0,
+      "n_government": 0,
+      "n_politician": 0,
+      "n_tvshow": 4
+    }
+  ],
+  "gcn_fixed_mlp_errors": 460,
+  "gcn_broke_mlp_correct": 79,
+  "both_wrong": 214,
+  "error_by_homophily": {
+    "0-0.25": [
+      79,
+      0.7848101258277893,
+      0.5443037748336792
+    ],
+    "0.25-0.5": [
+      110,
+      0.48181816935539246,
+      0.48181816935539246
+    ],
+    "0.5-0.75": [
+      372,
+      0.18817204236984253,
+      0.30645161867141724
+    ],
+    "0.75-1": [
+      2810,
+      0.038434162735939026,
+      0.1651245504617691
+    ]
+  },
+  "error_by_degree": {
+    "1": [
+      428,
+      0.13317756354808807,
+      0.23831775784492493
+    ],
+    "2-3": [
+      622,
+      0.12218649685382843,
+      0.26848873496055603
+    ],
+    "4-7": [
+      717,
+      0.09344490617513657,
+      0.21338912844657898
+    ],
+    "8-15": [
+      645,
+      0.07131782919168472,
+      0.18914729356765747
+    ],
+    "16+": [
+      959,
+      0.04900938645005226,
+      0.1355578750371933
+    ]
+  }
+}

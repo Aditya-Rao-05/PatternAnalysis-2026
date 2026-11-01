@@ -1,0 +1,294 @@
+node,page_name,true,gcn_pred,gcn_conf,mlp_pred,degree,homophily,neighbours_in_pred_class,n_company,n_government,n_politician,n_tvshow
+16052,Senate of Canada - Sénat du Canada,government,politician,1.0,politician,266,0.004,0.996,0,1,265,0
+9254,Comedy Central UK,company,tvshow,1.0,tvshow,16,0.062,0.938,1,0,0,15
+9708,Fractal,tvshow,company,1.0,company,1,0.0,1.0,1,0,0,0
+20212,ITV Football,company,tvshow,1.0,tvshow,8,0.0,1.0,0,0,0,8
+6163,Cámara de Diputados - H. Congreso de la Unión,government,politician,1.0,politician,48,0.167,0.833,0,8,40,0
+20083,DIRECTV Puerto Rico,company,tvshow,1.0,company,69,0.159,0.812,11,1,1,56
+17725,Ticketmaster United Kingdom,company,tvshow,0.999,politician,12,0.5,0.5,6,0,0,6
+3855,Viacom18,company,tvshow,0.999,company,4,0.0,1.0,0,0,0,4
+15612,Laurent Fabius,politician,government,0.999,politician,100,0.14,0.86,0,86,14,0
+920,Arthur Spring,politician,company,0.999,politician,15,0.333,0.667,10,0,5,0
+8755,Navy Federal Credit Union,company,government,0.999,government,48,0.042,0.958,2,46,0,0
+9291,UNIVERSO,company,tvshow,0.999,company,9,0.222,0.778,2,0,0,7
+17334,Stephen Ward the Musical,company,tvshow,0.996,tvshow,1,1.0,0.0,1,0,0,0
+17014,Transportation Security Administration,government,company,0.996,government,29,0.276,0.724,21,8,0,0
+15458,Kommunal- og moderniseringsdepartementet (Norge),government,politician,0.995,politician,22,0.727,0.273,0,16,6,0
+15699,WaterOne,company,government,0.995,government,8,0.0,1.0,0,8,0,0
+8131,Visite República Tcheca,government,company,0.992,company,9,0.222,0.778,7,2,0,0
+2146,Aristegui,tvshow,politician,0.991,government,7,0.286,0.714,0,0,5,2
+1894,Caltrain,company,government,0.991,government,9,0.0,0.889,0,8,0,1
+22287,Visit Czech Republic,government,company,0.99,company,5,0.4,0.6,3,2,0,0
+21096,Victorian Government News,government,politician,0.99,government,34,0.147,0.853,0,5,29,0
+19541,Nectar Sunglasses,company,tvshow,0.988,company,3,0.0,1.0,0,0,0,3
+16213,Congressman Dan Lipinski,politician,government,0.986,government,15,0.067,0.867,0,13,1,1
+2077,Roliga Prylar,company,tvshow,0.984,company,10,0.1,0.9,1,0,0,9
+5878,e-Democracia,government,politician,0.981,politician,28,0.179,0.821,0,5,23,0
+18331,Visita la Repubblica Ceca,government,company,0.98,company,2,0.5,0.5,1,1,0,0
+8727,Star Observer,company,politician,0.979,tvshow,12,0.083,0.917,1,0,11,0
+15265,Governo do Maranhão,government,politician,0.979,politician,12,0.25,0.75,0,3,9,0
+15979,La Fortaleza de PR,government,politician,0.977,government,7,0.286,0.571,1,2,4,0
+3018,Congressman G. K. Butterfield,politician,government,0.971,government,6,0.167,0.667,1,4,1,0
+3917,Red Arrow,tvshow,company,0.971,company,14,0.429,0.571,8,0,0,6
+2641,MaltaGov,government,politician,0.971,politician,9,0.111,0.889,0,1,8,0
+7218,Jung & Naiv,tvshow,politician,0.971,politician,10,0.2,0.7,0,1,7,2
+2161,Behindertenbeauftragte der Bundesregierung - Verena Bentele,government,politician,0.97,politician,21,0.238,0.714,0,5,15,1
+18716,Omaze,company,tvshow,0.97,tvshow,6,0.167,0.667,1,0,1,4
+10198,Bundesministerium für Arbeit und Soziales,government,politician,0.962,politician,57,0.439,0.561,0,25,32,0
+18788,Vinyl,tvshow,company,0.961,company,1,0.0,1.0,1,0,0,0
+21912,La Vache Qui Rit Arabia البقرة الضاحكة,company,tvshow,0.96,tvshow,1,0.0,1.0,0,0,0,1
+14555,Sport / iDNES.cz,company,government,0.959,government,2,0.5,0.5,1,1,0,0
+18549,NSDC National Skill Development Corporation,government,politician,0.953,government,5,0.4,0.6,0,2,3,0
+7980,Governor Roy Cooper,politician,government,0.949,government,4,0.25,0.75,0,3,1,0
+3631,Hollywood Music in Media Awards,company,tvshow,0.948,tvshow,5,0.2,0.8,1,0,0,4
+22383,Utenriksdepartementet (Norge),government,politician,0.935,politician,15,0.733,0.267,0,11,4,0
+3564,Senator Kevin Parker,politician,government,0.934,government,34,0.147,0.735,4,25,5,0
+17415,Northrop Grumman Careers,company,government,0.929,government,12,0.167,0.833,2,10,0,0
+8576,Bundeszentrale für politische Bildung (bpb),government,politician,0.924,politician,50,0.54,0.42,0,27,21,2
+22093,Honda Power Equipment Australia,company,tvshow,0.922,politician,3,0.0,1.0,0,0,0,3
+6127,カナディアン・ロッキーいいね！,company,government,0.921,government,4,0.75,0.25,3,1,0,0
+18101,Kropka nad i,tvshow,politician,0.921,government,5,0.4,0.6,0,0,3,2
+5465,Port of Portland,government,company,0.918,company,13,0.231,0.769,10,3,0,0
+14432,Bugár Béla,politician,government,0.912,politician,2,0.5,0.0,1,0,1,0
+8676,RDI Économie,tvshow,politician,0.905,tvshow,2,0.0,1.0,0,0,2,0
+12865,Chronicle on WCVB Channel 5,tvshow,company,0.905,company,2,0.5,0.5,1,0,0,1
+13371,Status PR,company,tvshow,0.897,company,2,0.0,1.0,0,0,0,2
+12364,WX Geeks,tvshow,government,0.896,government,4,0.25,0.75,0,3,0,1
+11764,City of Stevens Point Government,government,company,0.894,company,1,1.0,0.0,0,1,0,0
+3627,"Tähdet, tähdet",tvshow,company,0.893,company,5,0.8,0.2,1,0,0,4
+11632,Gary Harper - 3 On Your Side,tvshow,company,0.891,company,1,1.0,0.0,0,0,0,1
+12241,Maybrit Illner,tvshow,politician,0.889,politician,10,0.4,0.5,0,1,5,4
+14478,Campus France India,government,company,0.889,government,14,0.571,0.429,6,8,0,0
+21982,Baey Yam Keng 马炎庆,politician,government,0.884,government,7,0.714,0.286,0,2,5,0
+8927,カナダ・BC州観光局,company,government,0.881,government,2,1.0,0.0,2,0,0,0
+14568,Catching Killers,tvshow,company,0.878,company,1,1.0,0.0,0,0,0,1
+2728,Eczacıbaşı Topluluğu,company,government,0.874,government,1,0.0,1.0,0,1,0,0
+10346,Besuch Israel,company,government,0.872,government,14,0.214,0.786,3,11,0,0
+11610,Councilman Joel Burns,politician,government,0.867,government,1,0.0,1.0,0,1,0,0
+7000,Major League Fishing,tvshow,company,0.862,tvshow,7,0.143,0.857,6,0,0,1
+16496,Octagon,company,tvshow,0.86,company,1,0.0,1.0,0,0,0,1
+4393,Gobierno del Estado de México,government,politician,0.859,politician,13,0.308,0.692,0,4,9,0
+4273,Le Bureau Des Légendes,tvshow,government,0.857,government,1,0.0,1.0,0,1,0,0
+14607,Zona MX 101.9 FM,company,tvshow,0.854,company,4,0.0,1.0,0,0,0,4
+661,Cinescape,tvshow,company,0.853,company,8,0.5,0.375,3,1,0,4
+8716,Zeit im Bild,tvshow,politician,0.845,tvshow,15,0.267,0.533,0,3,8,4
+19804,Chess,company,tvshow,0.843,tvshow,1,1.0,0.0,1,0,0,0
+7204,Harangozó Gábor,politician,tvshow,0.84,tvshow,4,1.0,0.0,0,0,4,0
+8215,Viação 1001,company,government,0.836,politician,3,0.333,0.667,1,2,0,0
+5569,Carmen DAN,politician,government,0.835,government,1,0.0,1.0,0,1,0,0
+2935,"Pat McGuire, State Senator",politician,government,0.83,government,6,0.167,0.667,1,4,1,0
+1343,Svandís Svavarsdóttir,politician,company,0.819,company,1,1.0,0.0,0,0,1,0
+20230,Peter Pan the Musical,tvshow,company,0.816,company,2,0.5,0.5,1,0,0,1
+20512,"Village of Elk Grove, Illinois",government,company,0.812,government,5,0.4,0.4,2,2,0,1
+13837,Count Duckula TV,tvshow,company,0.808,company,1,1.0,0.0,0,0,0,1
+6251,Electoral Commission of Queensland,government,politician,0.807,government,14,0.429,0.571,0,6,8,0
+4852,Heartland Bowhunter,tvshow,company,0.806,company,8,0.625,0.25,2,1,0,5
+14122,L'OCCITANE en Provence,company,government,0.8,government,25,1.0,0.0,25,0,0,0
+14323,Polizei Unterfranken,government,politician,0.799,politician,7,0.571,0.429,0,4,3,0
+9725,SBS Eurovision,tvshow,government,0.799,government,15,0.533,0.267,1,4,2,8
+6150,日本旅遊活動  VISIT JAPAN NOW,government,company,0.798,company,2,0.0,1.0,2,0,0,0
+10140,"Ocean City, MD - Tourism",company,government,0.795,government,11,0.364,0.636,4,7,0,0
+20208,Marvel Universe Live,company,tvshow,0.795,government,2,0.5,0.5,1,0,0,1
+10976,"Thüringer Ministerium für Arbeit, Soziales, Gesundheit, Frauen und Familie",government,politician,0.794,politician,26,0.615,0.385,0,16,10,0
+13529,Push Travel,company,government,0.794,politician,3,0.333,0.667,1,2,0,0
+8425,The Voice - Najljepši glas Hrvatske,tvshow,company,0.791,tvshow,4,0.75,0.25,1,0,0,3
+10045,Florida Lottery,government,company,0.791,company,7,0.143,0.429,3,1,0,3
+8693,The Feed SBS VICELAND,tvshow,politician,0.788,politician,4,0.25,0.5,0,1,2,1
+10501,Stephen Cowan,politician,tvshow,0.786,company,16,0.5,0.5,0,0,8,8
+6023,This Old House,tvshow,company,0.782,company,25,0.44,0.56,14,0,0,11
+18151,NSW Electoral Commission,government,politician,0.78,politician,7,0.429,0.571,0,3,4,0
+13786,Арсеній Яценюк,politician,government,0.779,government,5,0.4,0.6,0,3,2,0
+15278,Alderman Van Johnson,politician,government,0.777,government,4,0.25,0.75,0,3,1,0
+3606,Ministério da Saúde,government,politician,0.771,government,104,0.49,0.481,3,51,50,0
+5472,Dr. Thawarchand Gehlot,politician,government,0.768,government,3,0.333,0.667,0,2,1,0
+5030,Brisbane City Council,government,politician,0.768,government,28,0.429,0.536,1,12,15,0
+2340,Ana Birchall,politician,government,0.766,government,29,0.31,0.655,1,19,9,0
+17175,Pat Breen,politician,government,0.765,politician,1,1.0,0.0,0,0,1,0
+17643,Raghubar Das,politician,government,0.764,politician,1,0.0,1.0,0,1,0,0
+6267,YPF,company,government,0.761,company,5,0.2,0.8,1,4,0,0
+10830,Ing. Aquiles Córdova Morán,politician,company,0.751,politician,1,1.0,0.0,0,0,1,0
+22069,TwoTube,tvshow,company,0.749,government,2,0.5,0.5,1,0,0,1
+14512,Ofir Akunis - אופיר אקוניס,politician,government,0.746,government,7,0.429,0.571,0,4,3,0
+1590,George Stathakis,politician,government,0.743,government,2,0.5,0.5,0,1,1,0
+7280,Dimitris Tzanakopoulos - Δημήτρης Τζανακόπουλος,politician,government,0.741,government,7,0.714,0.286,0,2,5,0
+10516,משה (בוגי) יעלון - Moshe (Bogie) Ya'alon,politician,government,0.737,government,6,0.167,0.833,0,5,1,0
+8321,L'OCCITANE en Provence,company,government,0.735,tvshow,23,1.0,0.0,23,0,0,0
+16396,eltrece - Almorzando   con   Mirtha   Legrand,tvshow,politician,0.732,politician,1,0.0,1.0,0,0,1,0
+9316,Encrenca,tvshow,company,0.731,company,1,1.0,0.0,0,0,0,1
+1108,الهيئة العامة للدفاع المدني و الإسعاف عمان,government,company,0.73,company,1,0.0,1.0,1,0,0,0
+8489,Visitate Israele,company,government,0.73,government,15,0.4,0.533,6,8,1,0
+7527,ZDF zoom,tvshow,politician,0.729,politician,4,0.5,0.5,0,0,2,2
+4825,대한민국 농림축산식품부,government,company,0.728,government,65,0.677,0.246,16,44,1,4
+9510,Farmacias Cruz Azul,company,government,0.727,government,2,0.5,0.5,1,1,0,0
+6948,Steve Kulik,politician,government,0.723,government,2,0.5,0.5,0,1,1,0
+3101,Kortney & Dave,tvshow,company,0.72,company,1,1.0,0.0,0,0,0,1
+1057,L'OCCITANE en Provence,company,government,0.72,government,10,1.0,0.0,10,0,0,0
+1945,Salut les Terriens,tvshow,politician,0.717,government,16,0.375,0.5,2,0,8,6
+1046,مجموعة إزدان القابضة - Ezdan Holding Group,company,government,0.717,government,1,1.0,0.0,1,0,0,0
+1455,L'OCCITANE en Provence,company,government,0.716,government,17,1.0,0.0,17,0,0,0
+989,Ovidiu Raeţchi,politician,company,0.714,government,1,1.0,0.0,0,0,1,0
+14417,Marseille,tvshow,company,0.711,company,1,0.0,0.0,0,1,0,0
+18576,WSB-TV Sports Zone,tvshow,company,0.703,company,1,1.0,0.0,0,0,0,1
+2924,MinuteClinic,company,government,0.702,government,7,0.714,0.286,5,2,0,0
+19290,Deadliest Catch: Dungeon Cove,tvshow,company,0.7,company,1,1.0,0.0,0,0,0,1
+4303,משה כחלון,politician,government,0.7,government,3,0.667,0.333,0,1,2,0
+5026,Canal Digital Sverige,company,tvshow,0.694,company,5,0.4,0.6,2,0,0,3
+17317,Queensland Corrective Services,government,politician,0.692,politician,5,0.6,0.4,0,3,2,0
+12179,Peter Rabbit TV,tvshow,company,0.691,company,2,0.5,0.5,1,0,0,1
+11165,Tulsi Gabbard,politician,government,0.687,politician,17,0.294,0.529,1,9,5,2
+16887,Enjoy Illinois,company,government,0.686,government,29,0.379,0.414,11,12,2,4
+11121,Haus der Europäischen Union,government,politician,0.685,government,14,0.643,0.357,0,9,5,0
+15806,Ministerstwo Cyfryzacji,government,politician,0.685,government,11,0.545,0.455,0,6,5,0
+10233,Optum,company,government,0.685,government,1,1.0,0.0,1,0,0,0
+16484,Boundless,tvshow,company,0.684,company,5,0.8,0.2,1,0,0,4
+1400,박근혜 Park Geun-Hye,politician,government,0.684,government,5,0.0,1.0,0,5,0,0
+14614,Anja Butschkau,politician,tvshow,0.683,tvshow,1,1.0,0.0,0,0,1,0
+7851,L'OCCITANE en Provence,company,government,0.683,government,18,1.0,0.0,18,0,0,0
+17471,netdoktor.at,company,government,0.68,politician,1,0.0,0.0,0,0,0,1
+15051,México Destinos,company,government,0.679,politician,1,0.0,1.0,0,1,0,0
+12234,Mayor Liz Lempert,politician,government,0.675,government,3,0.333,0.667,0,2,1,0
+18802,Bienvenue à la ferme,company,tvshow,0.674,company,3,0.667,0.333,2,0,0,1
+13603,Jaago Re,company,government,0.672,company,1,0.0,1.0,0,1,0,0
+3808,Vintage Español,company,tvshow,0.671,company,1,0.0,1.0,0,0,0,1
+20987,Alicia L. Hyndman,politician,government,0.662,government,2,0.5,0.5,0,1,1,0
+2635,L'OCCITANE en Provence,company,government,0.661,government,29,1.0,0.0,29,0,0,0
+13762,Eduardo Tassano,politician,government,0.661,government,3,0.667,0.333,0,1,2,0
+10684,Arlington Parks and Recreation,government,company,0.66,company,5,0.8,0.2,1,4,0,0
+21686,Eni,company,government,0.659,company,1,0.0,1.0,0,1,0,0
+10260,The Dudesons,tvshow,company,0.659,tvshow,2,0.5,0.5,1,0,0,1
+19331,Governo do Estado de Minas Gerais,government,politician,0.659,politician,19,0.474,0.526,0,9,10,0
+5483,Kelsey Nixon,tvshow,company,0.658,tvshow,5,0.4,0.6,3,0,0,2
+5661,Trump International Realty,company,government,0.657,government,1,0.0,1.0,0,1,0,0
+18147,João Pinho de Almeida,politician,government,0.644,government,5,0.6,0.4,0,2,3,0
+15592,Facebook,company,government,0.643,company,41,0.171,0.829,7,34,0,0
+7390,Transport Accident Commission (TAC),government,politician,0.642,government,17,0.353,0.529,1,6,9,1
+14877,NESTEA,company,tvshow,0.64,tvshow,3,1.0,0.0,3,0,0,0
+21074,Adrián Rubalcava Suárez,politician,company,0.639,politician,3,0.333,0.667,2,0,1,0
+22291,Gabriel Petrea,politician,government,0.639,government,1,1.0,0.0,0,0,1,0
+17566,Steve Harvey TV,tvshow,company,0.638,company,18,0.5,0.222,4,5,0,9
+9459,L'OCCITANE en Provence,company,government,0.637,government,6,1.0,0.0,6,0,0,0
+9789,San Remo,company,tvshow,0.634,politician,4,0.5,0.5,2,0,0,2
+17067,KlickKlack,tvshow,politician,0.628,politician,2,0.5,0.5,0,0,1,1
+8429,Municipalidad de San Miguel (Buenos Aires),government,politician,0.627,politician,2,0.5,0.5,0,1,1,0
+17970,Australia Post Graduate Program,company,government,0.626,politician,2,1.0,0.0,2,0,0,0
+17695,Queensland Police Service,government,politician,0.625,government,112,0.375,0.518,2,42,58,10
+10467,udn tv【藝想世界】,tvshow,government,0.623,government,4,0.75,0.25,0,1,0,3
+6524,MasterChef Mx,tvshow,company,0.622,company,2,1.0,0.0,0,0,0,2
+13466,Taking Fire,tvshow,government,0.621,government,1,0.0,1.0,0,1,0,0
+12346,財務省,government,company,0.62,company,6,1.0,0.0,0,6,0,0
+17552,Iulian Dumitrescu,politician,government,0.617,government,3,1.0,0.0,0,0,3,0
+21124,Zon Lawak,tvshow,company,0.617,company,2,0.5,0.5,1,0,0,1
+16146,Prime Minister's Literary Awards,government,politician,0.616,tvshow,18,0.556,0.333,0,10,6,2
+14421,Harry Potter Shop,company,tvshow,0.616,company,1,1.0,0.0,1,0,0,0
+4359,L'OCCITANE en Provence,company,government,0.616,government,2,1.0,0.0,2,0,0,0
+13066,Tokyo Gov,government,company,0.614,company,3,1.0,0.0,0,3,0,0
+11696,Éricka Bareigts,politician,government,0.612,government,13,0.538,0.462,0,6,7,0
+20048,Open House,tvshow,company,0.607,tvshow,2,0.5,0.5,1,0,0,1
+21009,WDRB in the Morning,tvshow,company,0.605,company,2,0.5,0.0,0,1,0,1
+9300,Studio 512,tvshow,company,0.603,politician,9,0.444,0.222,2,3,0,4
+12374,Club Grunt Style,company,government,0.599,government,7,0.286,0.429,2,3,0,2
+4724,SBS INSIGHT,tvshow,politician,0.596,politician,13,0.231,0.462,0,4,6,3
+19981,Mercury Insurance,company,government,0.595,company,4,0.25,0.5,1,2,0,1
+1755,Yard House Jobs,company,government,0.592,government,3,0.667,0.333,2,1,0,0
+2636,"끝없는 발견, 캐나다에 오신 것을 환영합니다.",government,company,0.591,government,8,0.125,0.875,7,1,0,0
+13696,Good Things Utah,tvshow,company,0.589,company,2,1.0,0.0,0,0,0,2
+5649,Fique Alerta,tvshow,company,0.588,company,2,1.0,0.0,0,0,0,2
+19145,Quitoque,company,government,0.586,tvshow,1,1.0,0.0,1,0,0,0
+20661,Kia Motors – Iraq(NIM),company,tvshow,0.585,tvshow,3,1.0,0.0,3,0,0,0
+15133,T2 Tea,company,tvshow,0.585,politician,2,1.0,0.0,2,0,0,0
+10639,Martín Ocampo,politician,government,0.579,government,5,0.6,0.4,0,2,3,0
+17182,Disneyland Latino,company,tvshow,0.576,company,10,0.5,0.5,5,0,0,5
+21489,Good Morning America,tvshow,company,0.575,tvshow,83,0.422,0.41,34,14,0,35
+7122,Assembleia Legislativa do Estado do Rio Grande do Sul,government,politician,0.573,politician,13,0.769,0.231,0,10,3,0
+22010,Antarctica New Zealand,government,company,0.573,government,24,0.458,0.25,6,11,2,5
+425,OLD BAY® Seasoning,company,government,0.569,government,6,0.333,0.5,2,3,1,0
+12945,Sue Bernal,politician,government,0.564,politician,2,0.5,0.5,0,1,1,0
+5993,Vic Emergency,government,politician,0.563,government,16,0.5,0.5,0,8,8,0
+5946,28 minutes,tvshow,politician,0.56,politician,15,0.467,0.4,0,2,6,7
+2563,Valg i Norge,government,politician,0.558,politician,1,1.0,0.0,0,1,0,0
+15797,7 News Sunshine Coast,tvshow,politician,0.555,government,20,0.5,0.4,0,2,8,10
+1541,Casseta & Planeta - Oficial,tvshow,politician,0.555,politician,2,0.5,0.5,0,0,1,1
+2791,好想談戀愛,tvshow,company,0.554,politician,5,0.8,0.2,1,0,0,4
+13018,Apollo Sverige,company,government,0.553,government,2,1.0,0.0,2,0,0,0
+2587,איוב קרא - Ayoob kara,politician,government,0.552,government,1,1.0,0.0,0,0,1,0
+21448,Martín Lousteau,politician,government,0.552,politician,2,0.5,0.5,0,1,1,0
+8423,איסתא,company,government,0.551,government,1,1.0,0.0,1,0,0,0
+9484,BlaBlaCar,company,government,0.543,company,2,0.5,0.5,1,1,0,0
+13619,Kia Aljabr كيا الجبر,company,tvshow,0.543,tvshow,11,1.0,0.0,11,0,0,0
+22204,Philippine Embassy in Canada,government,politician,0.543,government,4,0.5,0.5,0,2,2,0
+3583,Oscar Almaraz Smer,politician,government,0.543,politician,2,1.0,0.0,0,0,2,0
+11670,L'OCCITANE en Provence,company,government,0.54,government,3,1.0,0.0,3,0,0,0
+6068,Lost & Found Music Studios,tvshow,company,0.54,tvshow,2,0.5,0.5,1,0,0,1
+10708,Freedom Mobile,company,tvshow,0.539,company,3,0.333,0.0,1,1,1,0
+15497,Patrimonio Hoy,company,government,0.536,government,2,1.0,0.0,2,0,0,0
+7053,INFINITI,company,tvshow,0.534,tvshow,3,1.0,0.0,3,0,0,0
+14855,ExtraOrdinários - Sportv,tvshow,government,0.532,politician,5,1.0,0.0,0,0,0,5
+4961,L'OCCITANE en Provence,company,government,0.529,government,14,1.0,0.0,14,0,0,0
+15050,Ernesto Nemer Alvarez,politician,government,0.528,politician,2,1.0,0.0,0,0,2,0
+21054,Student Flights Australia,company,tvshow,0.528,company,60,0.45,0.517,27,1,1,31
+17003,Nestle Yogurt,company,tvshow,0.526,tvshow,4,1.0,0.0,4,0,0,0
+984,MILO® Philippines,company,tvshow,0.526,tvshow,4,1.0,0.0,4,0,0,0
+11662,Todrick,tvshow,company,0.517,tvshow,1,1.0,0.0,0,0,0,1
+2050,Une saison au ZOO,tvshow,company,0.516,tvshow,1,1.0,0.0,0,0,0,1
+4198,Yukon Gold,tvshow,company,0.513,company,2,1.0,0.0,0,0,0,2
+21092,Erik Christensen,politician,tvshow,0.513,tvshow,3,0.667,0.333,0,0,2,1
+8363,黎敬瑋 Lai King Wai,politician,tvshow,0.506,government,13,1.0,0.0,0,0,13,0
+3744,Travel Oregon,company,government,0.504,government,6,1.0,0.0,6,0,0,0
+1013,Juliette Méadel,politician,government,0.503,politician,3,0.333,0.667,0,2,1,0
+17061,Die Bachelorette,tvshow,company,0.498,company,1,1.0,0.0,0,0,0,1
+12850,L'Oréal Talent,company,government,0.495,government,20,1.0,0.0,20,0,0,0
+16136,L'Oréal Talent,company,government,0.494,government,17,1.0,0.0,17,0,0,0
+16159,L'Oréal Talent,company,government,0.492,tvshow,18,1.0,0.0,18,0,0,0
+16341,EDF,company,government,0.491,tvshow,6,0.5,0.333,3,2,1,0
+231,Kathleen Lynch,politician,tvshow,0.49,company,5,0.8,0.2,0,0,4,1
+5421,Der Bachelor,tvshow,company,0.487,tvshow,1,1.0,0.0,0,0,0,1
+10852,L'Oréal Talent,company,government,0.487,tvshow,18,1.0,0.0,18,0,0,0
+13248,L'Oréal Talent,company,government,0.486,tvshow,17,1.0,0.0,17,0,0,0
+4571,MasterChef Australia: Ava Stangherlin,tvshow,company,0.485,company,1,1.0,0.0,0,0,0,1
+22143,Captain Clay Higgins,politician,government,0.481,company,2,0.5,0.5,0,1,1,0
+19774,NSW SES - Bellingen Unit,government,politician,0.478,government,4,0.75,0.25,0,3,1,0
+6241,Miljø- og Fødevareministeriet,government,politician,0.477,politician,4,0.5,0.5,0,2,2,0
+11202,John Neely Kennedy,politician,government,0.476,politician,6,0.167,0.5,1,3,1,1
+15584,Israel Border Police - משמר הגבול,government,politician,0.473,government,2,0.5,0.5,0,1,1,0
+2164,Una vita da social,government,company,0.469,government,4,0.5,0.25,1,2,0,1
+4715,Mark Pearson,politician,tvshow,0.467,tvshow,2,1.0,0.0,0,0,2,0
+10087,יעקב פרי - Yaakov Perry,politician,government,0.457,government,15,0.867,0.133,0,2,13,0
+20544,Roosevelt Skerrit,politician,government,0.456,politician,10,0.3,0.5,1,5,3,1
+8747,Mickey Levy - מיקי לוי,politician,government,0.455,government,16,0.875,0.125,0,2,14,0
+17672,اليونسكو,government,politician,0.453,government,3,0.667,0.333,0,2,1,0
+11040,楊曜Yangyao,politician,government,0.451,government,11,0.909,0.091,0,1,10,0
+5521,NESTEA,company,tvshow,0.449,company,3,1.0,0.0,3,0,0,0
+354,"Vårt lille land, TV 2",tvshow,company,0.444,company,1,1.0,0.0,0,0,0,1
+12938,國稅局新營分局,government,tvshow,0.444,tvshow,4,1.0,0.0,0,4,0,0
+19012,Alan Brown MP,politician,government,0.444,politician,1,1.0,0.0,0,0,1,0
+18311,Kevin Byrne,politician,tvshow,0.438,politician,1,1.0,0.0,0,0,1,0
+20330,Pearland Parks and Recreation,government,company,0.433,company,3,0.333,0.0,0,1,1,1
+16894,9 News Queensland,tvshow,politician,0.431,politician,2,0.5,0.5,0,0,1,1
+20971,Great Day Houston,tvshow,company,0.431,company,2,0.5,0.0,0,1,0,1
+4422,Kia Motors Lebanon,company,tvshow,0.428,tvshow,1,1.0,0.0,1,0,0,0
+6519,望安鄉公所,government,tvshow,0.424,company,1,1.0,0.0,0,1,0,0
+10671,Armenia in Eurovision,tvshow,government,0.424,government,2,1.0,0.0,0,0,0,2
+9436,魏嘉彥,politician,government,0.421,politician,2,0.5,0.5,0,1,1,0
+17534,Senator Paul Utke,politician,government,0.42,politician,2,0.5,0.5,0,1,1,0
+6400,North Wales Fire and Rescue Service / Gwasanaeth Tân ac Achub Gogledd Cymru,government,politician,0.419,politician,4,0.5,0.25,0,2,1,1
+4392,GIORDANO,company,tvshow,0.412,government,12,1.0,0.0,12,0,0,0
+7699,SPORT1 Handball,tvshow,government,0.405,government,5,0.8,0.0,0,0,1,4
+3333,L'Oréal Talent,company,government,0.404,tvshow,19,1.0,0.0,19,0,0,0
+6063,Senator Michelle Fischbach,politician,company,0.4,politician,2,1.0,0.0,0,0,2,0
+7675,מיקי רוזנטל,politician,government,0.399,government,4,0.75,0.25,0,1,3,0
+8315,RTP - Festival da Canção,tvshow,government,0.398,government,3,1.0,0.0,0,0,0,3
+13943,William à midi,tvshow,government,0.398,government,6,0.833,0.0,0,0,1,5
+12085,Unimed-Rio,company,politician,0.394,politician,3,0.667,0.333,2,0,1,0
+10573,Rogán Antal,politician,tvshow,0.387,tvshow,1,1.0,0.0,0,0,1,0
+11353,Senator Scott Newman,politician,tvshow,0.386,politician,5,1.0,0.0,0,0,5,0
+20503,公視影集粉絲團,tvshow,politician,0.385,politician,1,1.0,0.0,0,0,0,1
+12148,GIORDANO,company,tvshow,0.383,government,8,1.0,0.0,8,0,0,0
+2560,NESTEA,company,tvshow,0.379,tvshow,2,1.0,0.0,2,0,0,0
+6981,TVBS T觀點,tvshow,company,0.347,politician,4,1.0,0.0,0,0,0,4
+4462,Gregor Rutz,politician,tvshow,0.337,tvshow,7,1.0,0.0,0,0,7,0
+18848,T.C. Aktau Başkonsolosluğu - Генеральное Консульство Турции в Aктау,government,company,0.332,government,1,1.0,0.0,0,1,0,0
+16669,เวทีทอง เวทีเธอ,tvshow,politician,0.327,politician,1,1.0,0.0,0,0,0,1
+7342,SHARK Energy,company,government,0.31,tvshow,2,1.0,0.0,2,0,0,0
+4892,愛ㄑ桃,government,tvshow,0.305,company,3,0.667,0.0,0,2,1,0
+15875,Pajuçara Noite,tvshow,company,0.295,politician,2,1.0,0.0,0,0,0,2
+3572,下課花路米,tvshow,politician,0.293,tvshow,1,1.0,0.0,0,0,0,1
