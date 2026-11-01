@@ -21,7 +21,7 @@ import torch
 from torch_geometric.data import Data
 from torch_geometric.utils import degree
 
-CLASS_NAMES = ["tvshow", "government", "company", "politician"]
+CLASS_NAMES = ["company", "government", "politician", "tvshow"]  # alphabetical label encoding
 
 
 def load_facebook(path="data/facebook.npz"):
