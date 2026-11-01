@@ -24,7 +24,7 @@
 
 The Facebook Large Page-Page Network [1] is a graph of 22,470 verified Facebook pages (nodes) connected by
 171,002 mutual "likes" (edges). Each page belongs to one of four categories defined by Facebook:
-**TV show, government organisation, company, or politician**, and is described by a 128-dimensional feature
+**company, government organisation, politician, or TV show**, and is described by a 128-dimensional feature
 vector derived from the text the page owner wrote about the page.
 
 The task is **semi-supervised multi-class node classification**: given the graph and the labels of a subset of
@@ -91,7 +91,7 @@ coverage-vs-accuracy, VRAM/params/latency.
 |---|---|
 | Nodes / edges | 22,470 / 171,002 undirected (342,004 directed) |
 | Feature dim / classes | 128 / 4 |
-| Class counts | TV show 6,495 · Govt 6,880 · Company 5,768 · Politician 3,327 |
+| Class counts | TV show 6,495 · Govt 6,880 · Company 5,768 · Politician 3,327 * |
 | Split (seed 42) | 70/15/15 random node split |
 | MLP baseline val acc | 0.781 (100 epochs) |
 | MLP params / train time | 8,516 / 5.5 s on CPU |
@@ -100,6 +100,10 @@ coverage-vs-accuracy, VRAM/params/latency.
 Over-smoothing/overfitting → shallow depth, dropout, weight decay, early stopping. Class imbalance → macro-F1
 and per-class recall. Overconfident GNN → temperature scaling, ECE, reject threshold. Label leakage → strict
 masks with assertions. Budget < 2 GPU-hours. Fallback: GCN if GAT is unstable; CPU if no GPU.
+
+\* *Correction after the check-off:* the class names in this table followed the label mapping given in the
+dataset's README, which turned out to be wrong (see Section 4). The correct counts are company 6,495 ·
+government 6,880 · politician 5,768 · TV show 3,327. The numbers themselves are unchanged.
 
 ## 4. Dataset, pre-processing and splits
 
@@ -113,16 +117,25 @@ It contains `X` (22,470 × 128 float features, SVD-compressed from 4,714 descrip
 | Statistic | Value |
 |---|---|
 | Nodes / directed edges / features | 22,470 / 342,004 / 128 |
-| TV show / government / company / politician | 6,495 (28.9%) / 6,880 (30.6%) / 5,768 (25.7%) / 3,327 (14.8%) |
+| Company / government / politician / TV show | 6,495 (28.9%) / 6,880 (30.6%) / 5,768 (25.7%) / 3,327 (14.8%) |
 | Edge homophily (same-class edges) | **0.885** |
 | Degree (mean / median / max) | 15.2 / 7 / 709 |
 | Isolated nodes | 0 |
+
+**Label encoding (corrected).** The dataset's README states 0 = TV show, 1 = government, 2 = company,
+3 = politician, and my first runs used that mapping. Inspecting predictions for well-known pages (airlines
+appearing as "TV show", a city mayor as "company") showed it was wrong. A keyword check on page names
+confirmed the labels are encoded **alphabetically**: 1,206 of 1,209 pages with government keywords
+("ministry", "embassy", ...) have label 1, 162 of 172 company-keyword pages have label 0, 103 of 125
+politician-keyword pages have label 2, and 120 of 142 TV-keyword pages have label 3. So
+**0 = company, 1 = government, 2 = politician, 3 = TV show**. Correcting the names did not change any
+numeric result, since training and evaluation only use the integer labels.
 
 **Pre-processing:** none beyond converting arrays to tensors. The features are already a dense SVD
 embedding, and `GCNConv` adds self-loops and applies degree normalisation internally.
 
 **Splits:** a **stratified 70 / 15 / 15** node split (seed 42), giving 15,729 train / 3,370 validation /
-3,371 test nodes. Each class is split separately so the minority politician class (14.8%) keeps the same
+3,371 test nodes. Each class is split separately so the minority TV-show class (14.8%) keeps the same
 share in every split; otherwise its validation/test scores would be noisy. The split is implemented as boolean
 masks, and `check_masks()` asserts that the three masks are disjoint and cover every node.
 
@@ -161,7 +174,9 @@ The dataset and model weights are not committed (see `.gitignore`).
 python dataset.py     # data audit
 python train.py       # trains MLP and GCN, saves checkpoints/ and figures/*_curves.png
 python evaluate.py    # test metrics, confusion matrices, t-SNE, results/metrics.json
-python predict.py     # TODO: inference demo on saved weights
+python dilemma.py     # calibration, temperature scaling, reject threshold
+python autopsy.py     # failure-case autopsy
+python predict.py     # inference demo with the triage policy (try --name "Senate")
 ```
 `train.py` accepts `--model {mlp,gcn,both}`, `--lr`, `--weight_decay`, `--hidden`, `--dropout`,
 `--epochs`, `--patience` and `--seed`.
@@ -202,29 +217,30 @@ aggregation both adding information and acting as a smoothing regulariser.
 
 | Class | MLP P / R / F1 | GCN P / R / F1 | GCN AUROC |
 |---|---|---|---|
-| TV show | 0.846 / 0.843 / 0.844 | 0.925 / 0.904 / 0.914 | 0.982 |
+| Company | 0.846 / 0.843 / 0.844 | 0.925 / 0.904 / 0.914 | 0.982 |
 | Government | 0.793 / 0.849 / 0.820 | 0.897 / 0.942 / 0.919 | 0.985 |
-| Company | 0.795 / 0.801 / 0.798 | 0.932 / 0.925 / 0.929 | 0.990 |
-| Politician | 0.725 / 0.613 / 0.664 | 0.891 / 0.852 / 0.871 | 0.984 |
+| Politician | 0.795 / 0.801 / 0.798 | 0.932 / 0.925 / 0.929 | 0.990 |
+| TV show | 0.725 / 0.613 / 0.664 | 0.891 / 0.852 / 0.871 | 0.984 |
 
-The largest gain is on the **minority politician class**: recall rises from 0.613 to 0.852 (+24 points)
-and F1 from 0.664 to 0.871. From features alone, politician pages are often confused with TV shows and
-companies, but their neighbourhoods are strongly politician, so homophily recovers most of them.
+The largest gain is on the **minority TV-show class**: recall rises from 0.613 to 0.852 (+24 points)
+and F1 from 0.664 to 0.871. From features alone, TV-show pages are often confused with companies (media
+brands and broadcasters describe themselves similarly), but their neighbourhoods are mostly other TV shows,
+so homophily recovers most of them.
 
 ### Confusion matrices
 ![Confusion matrices](figures/confusion_matrices.png)
 
-The MLP's largest error is **politician → TV show (18%)**, followed by company → government (14%). The GCN
-halves the politician → TV show error to 9%, but it remains the GCN's largest single error, which motivates
-the failure autopsy in Section 8.
+The MLP's largest error is **TV show → company (18%)**, followed by politician → government (14%). The GCN
+halves TV show → company to 9% and politician → government to 6%. TV show → company remains the GCN's largest
+single error, which motivates the failure autopsy in Section 8.
 
 ### t-SNE of hidden embeddings
 ![t-SNE](figures/tsne_embeddings.png)
 
 The 64-dimensional hidden representations of the test nodes are projected to 2D with t-SNE [4] and coloured by
-ground-truth class. In the MLP, the government class is fragmented into many small islands and politicians
-overlap with TV shows and companies in the centre. In the GCN, each class forms larger, more contiguous
-regions, especially government and company. Residual overlap is concentrated at the politician–TV show
+ground-truth class. In the MLP, the government class is fragmented into many small islands and TV shows
+overlap with companies and politicians in the centre. In the GCN, each class forms larger, more contiguous
+regions, especially government and politician. Residual overlap is concentrated at the TV show–company
 boundary, matching the confusion matrix.
 
 ### Resource profile
@@ -233,7 +249,7 @@ boundary, matching the confusion matrix.
 |---|---|---|
 | Parameters | 8,516 | 8,516 |
 | Training time (CPU) | 7.0 s | 80.4 s |
-| Full-graph inference (CPU, mean of 20 runs) | 3.0 ms | 46.6 ms |
+| Full-graph inference (CPU, mean of 20 runs) | 2.4–3.0 ms | 38–47 ms |
 | Peak GPU memory | N/A (CPU) | N/A (CPU) |
 
 All runs used a laptop CPU, so peak GPU VRAM is not applicable. The GCN costs ~11× more training time and
@@ -247,23 +263,82 @@ the acceptance criteria (training < 5 min, inference < 1 s).
 | GCN test accuracy | ≥ 0.90 | 0.913 | ✅ |
 | GCN macro-F1 | ≥ 0.88 | 0.908 | ✅ |
 | Macro-F1 gain over MLP | ≥ 5 points | +12.6 | ✅ |
-| ECE after temperature scaling | ≤ 0.05 | TODO | ⏳ |
-| Accuracy at ≤ 15% routed to review | ≥ 0.97 | TODO | ⏳ |
+| ECE after temperature scaling | ≤ 0.05 | 0.021 | ✅ |
+| ≥ 0.97 accuracy with ≤ 15% routed to review | ≤ 15% | 20.1% routed | ❌ (narrow miss) |
 | Training time / inference | < 5 min / < 1 s | 80 s / 47 ms | ✅ |
 
 ## 7. The open dilemma: confidence and triage
 
-TODO (calibration analysis): confidence of correct vs incorrect predictions, reliability diagrams and ECE
-for both models, temperature scaling fitted on validation, coverage–accuracy curve and reject threshold.
+<!-- WRITE THIS SECTION IN YOUR OWN WORDS. Facts and figures to use are listed below; delete this comment. -->
+
+![Confidence histograms](figures/confidence_histograms.png)
+![Reliability diagrams](figures/reliability_diagrams.png)
+![Coverage vs accuracy](figures/coverage_accuracy.png)
+
+| | MLP | GCN |
+|---|---|---|
+| ECE (uncalibrated) | 0.033 | 0.044 |
+| Temperature T (fitted on validation) | 1.01 | 0.78 |
+| ECE (temperature-scaled) | 0.034 | 0.021 |
+| Mean confidence when correct / wrong | 0.831 / 0.568 | 0.893 / 0.636 |
+| Errors with confidence > 0.9 | 49 of 674 (7%) | 41 of 293 (14%) |
+
+**Reject option** (threshold chosen on validation for ≥ 0.97 accuracy on auto-handled pages, reported on test):
+
+| | Threshold | Automated | Routed to humans | Accuracy (automated) | Accuracy (routed) |
+|---|---|---|---|---|---|
+| MLP | 0.926 | 40.4% | 59.6% | 0.974 | 0.682 |
+| GCN | 0.825 | 79.9% | 20.1% | 0.971 | 0.683 |
+
+<!-- Points to cover, in your words:
+- Does confidence separate right from wrong? (yes on average; but 41 GCN errors are >90% confident)
+- GCN is UNDERconfident (T < 1 sharpens). Why might that be? (neighbourhood averaging + dropout smooth logits)
+- Temperature scaling never changes accuracy, only confidence. Both models meet ECE <= 0.05.
+- At the same 0.97 accuracy, the GCN automates twice as many pages (79.9% vs 40.4%).
+- Feasibility criterion "<= 15% routed" is narrowly MISSED (20.1%). Say so plainly.
+- Cost: ~11x training time (80 s vs 7 s), ~15x inference (38 ms vs 2.4 ms) - is it worth it? -->
 
 ## 8. Failure case autopsy
 
-TODO: 3–5 misclassified test pages (including confidently wrong ones): page name, true vs predicted label,
-confidence, degree and neighbour-label composition; diagnosis and whether each failure is systematic.
+<!-- WRITE THIS SECTION IN YOUR OWN WORDS. Delete this comment. -->
+
+![Error rate by homophily and degree](figures/error_by_homophily_degree.png)
+
+**Systematic patterns (test set):**
+
+| Node homophily | n | GCN error | MLP error |
+|---|---|---|---|
+| 0–0.25 | 79 | 0.785 | 0.544 |
+| 0.25–0.5 | 110 | 0.482 | 0.482 |
+| 0.5–0.75 | 372 | 0.188 | 0.306 |
+| 0.75–1 | 2,810 | 0.038 | 0.165 |
+
+GCN error by degree: 0.133 (degree 1) → 0.122 (2–3) → 0.093 (4–7) → 0.071 (8–15) → 0.049 (16+).
+The GCN fixed 460 of the MLP's errors and broke 79 pages the MLP had right.
+
+**Representative failure cases:**
+
+| Page | True | GCN predicted | Conf. | Degree | Neighbours in predicted class | MLP |
+|---|---|---|---|---|---|---|
+| Senate of Canada | government | politician | 1.00 | 266 | 100% | politician |
+| Viacom18 | company | TV show | 1.00 | 4 | 100% | company ✅ |
+| DIRECTV Puerto Rico | company | TV show | 1.00 | 69 | 81% | company ✅ |
+| Comedy Central UK | company | TV show | 1.00 | 16 | 94% | TV show |
+| Fractal | TV show | company | 1.00 | 1 | 100% | company |
+
+<!-- Points to cover, in your words:
+- Heterophily is the systematic failure: below 0.25 homophily the GCN is WORSE than the MLP.
+- Legislatures (Senate, Camara de Diputados) are government pages whose neighbours are almost all politicians.
+- Media companies / broadcasters (Viacom18, DIRECTV, Comedy Central UK) sit in TV-show neighbourhoods;
+  for Viacom18 and DIRECTV the MLP was RIGHT and the graph overrode correct features.
+- Fractal: one neighbour decides everything (low degree).
+- These are ambiguous category boundaries, not random noise. Systematic, not one-off.
+- Confidently-wrong errors cannot be caught by any threshold. -->
 
 ## 9. Recommendation to the project manager
 
-TODO.
+<!-- WRITE THIS IN YOUR OWN WORDS: deploy or not? at what threshold? what stays manual?
+     what would you try next (e.g. heterophily-aware GNN, using node degree/homophily as a routing signal)? -->
 
 ## 10. Artificial Intelligence Usage Disclosure
 
